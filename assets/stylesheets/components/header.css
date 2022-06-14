@@ -1,0 +1,16 @@
+.header {
+  background-color: #FFF;
+  padding: 10px 0;
+}
+
+.header .header__container {
+  max-width: 90%;
+  margin: auto;
+}
+
+.header .header__container .logo {
+  color: #FCCD07;
+  font-weight: bold;
+  font-size: 48px;
+}
+/*# sourceMappingURL=header.css.map */

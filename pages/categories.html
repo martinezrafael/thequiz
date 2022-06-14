@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>thequiz | Categorias</title>
+
+    <link rel="stylesheet" href="../assets/stylesheets/reset.css" />
+</head>
+
+<body>
+    <div class="container">
+        <form action="" method="get">
+            <div>
+                <h3>Level</h3>
+                <select name="level" id="level__list">
+                    <option class="levelItem" id="easy" value="easy">Fácil</option>
+                    <option class="levelItem" id="medium" value="medium">Médio</option>
+                    <option class="levelItem" id="hard" value="hard">Dificil</option>
+                </select>
+            </div>
+
+            <div>
+                <h3>Categorias</h3>
+                <input class="categorieItem" type="radio" name="category" value="musica" />Música
+                <input class="categorieItem" type="radio" name="category" value="cinema" />Cinema
+                <input class="categorieItem" type="radio" name="category" value="conhecimentos" />Conhecimentos Gerais
+            </div>
+
+            <input onclick="play(event)" type="submit" value="Jogar" />
+        </form>
+    </div>
+    <script src="../assets/scripts/categories.js"></script>
+</body>
+
+</html>
