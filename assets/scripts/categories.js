@@ -1,6 +1,4 @@
-
-
-//level
+//nível de dificuldade
 let levels = document.querySelectorAll(".levelItem");
 
 let difficulty = "";
@@ -30,9 +28,7 @@ const selectCategory = (event) => {
     console.log(theme);
 };
 
-const play = (event) => {
-    event.preventDefault();
-
+const play = () => {
     selectLevel();
     selectCategory();
 };

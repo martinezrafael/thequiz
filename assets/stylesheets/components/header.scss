@@ -6,6 +6,10 @@
         max-width: 90%;
         margin: auto;
 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
         .logo{
             color: #FCCD07;
             font-weight: bold;

@@ -1,14 +1,53 @@
 [
     {
         "description": "Pergunta 1",
-        "answers": ["resposta 1", "resposta 2"]
+        "alternatives": ["resposta 1", "resposta 2"],
+        "theme": "music"
     },
     {
         "description": "Pergunta 2",
-        "answers": ["resposta 1", "resposta 2"]
+        "alternatives": ["resposta 1", "resposta 2"],
+        "theme": "movie"
     },
     {
         "description": "Pergunta 3",
-        "answers": ["resposta 1", "resposta 2"]
+        "alternatives": ["resposta 1", "resposta 2"],
+        "theme": "knowledge"
+    },
+    {
+        "description": "Pergunta 4",
+        "alternatives": ["resposta 1", "resposta 2"],
+        "theme": "music"
+    },
+    {
+        "description": "Pergunta 5",
+        "alternatives": ["resposta 1", "resposta 2"],
+        "theme": "music"
+    },
+    {
+        "description": "Pergunta 6",
+        "alternatives": ["resposta 1", "resposta 2"],
+        "theme": "music"
+    },
+    {
+        "description": "Pergunta 7",
+        "alternatives": ["resposta 1", "resposta 2"],
+        "theme": "movie"
+    },
+    {
+        "description": "Pergunta 8",
+        "alternatives": ["resposta 1", "resposta 2"],
+        "theme": "music"
+    },
+    {
+        "description": "Pergunta 9",
+        "alternatives": ["resposta 1", "resposta 2"],
+        "theme": "knowledge"
+    },
+    {
+        "description": "Pergunta 10",
+        "alternatives": ["resposta 1", "resposta 2"],
+        "theme": "music"
     }
+    
 ]
