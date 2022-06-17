@@ -1,12 +1,14 @@
+"use strict";
+
 //nível de dificuldade
-let levels = document.querySelectorAll(".levelItem");
+let difficulties = document.querySelectorAll(".levelItem");
 
 let difficulty = "";
 
 const selectLevel = () => {
-    for (level of levels) {
-        if (level.selected) {
-            difficulty = level.value;
+    for (let difficultyOption of difficulties) {
+        if (difficultyOption.selected) {
+            difficulty = difficultyOption.value;
         }
     }
 
@@ -14,14 +16,14 @@ const selectLevel = () => {
 };
 
 //categorias
-let categories = document.querySelectorAll(".categorieItem");
+let themes = document.querySelectorAll(".categorieItem");
 
 let theme = "";
 
-const selectCategory = (event) => {
-    for (category of categories) {
-        if (category.checked) {
-            theme = category.value;
+const selectCategory = () => {
+    for (let themeOption of themes) {
+        if (themeOption.checked) {
+            theme = themeOption.value;
         }
     }
 
