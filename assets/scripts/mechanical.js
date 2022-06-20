@@ -15,28 +15,28 @@ const questions = [
         title: "Pergunta 1",
         description: "Descrição da pergunta 1",
         answers: ["opção 1", "opção 2", "opção 3"],
-        genre: "music",
+        theme: "music",
         dificultty: "easy",
     },
     {
         title: "Pergunta 2",
         description: "Descrição da pergunta 2",
         answers: ["opção 1", "opção 2", "opção 3"],
-        genre: "movie",
+        theme: "movie",
         dificultty: "medium",
     },
     {
         title: "Pergunta 3",
         description: "Descrição da pergunta 3",
         answers: ["opção 1", "opção 2", "opção 3"],
-        genre: "music",
+        theme: "music",
         dificultty: "medium",
     },
     {
         title: "Pergunta 4",
         description: "Descrição da pergunta 4",
         answers: ["opção 1", "opção 2", "opção 3"],
-        genre: "movie",
+        theme: "movie",
         dificultty: "easy",
     },
 ];
@@ -45,7 +45,7 @@ const questions = [
 const difficulties = document.querySelectorAll(".dificultty__item");
 
 //opção de dificuldade que o usuário selecionou
-let dificultty = '';
+let dificultty = "";
 
 /*funcão que identifica a opção que o usuario selecionou
 e coloca o valor na variavel dificultty*/
@@ -55,31 +55,49 @@ const selectDificultty = () => {
             dificultty = difficultyOption.value;
         }
     }
-
-    console.log(dificultty);
 };
 
 //opções de categorias que o usuário pode selecionar
-const themes = document.querySelectorAll('.theme__item');
+const themes = document.querySelectorAll(".theme__item");
 
 //opção de tema que o usuário selecionou
-let theme = '';
+let theme = "";
 
 /*funcão que identifica o tema que o usuario selecionou
 e coloca o valor na variavel theme*/
 const selectTheme = () => {
     for (let themeOption of themes) {
-        if(themeOption.checked) {
+        if (themeOption.checked) {
             theme = themeOption.value;
         }
     }
+};
 
-    console.log(theme)
-}
+//aqui pega o botão que inicia o jogo pelo DOM
+const btnPlay = document.getElementById("btn__play");
 
+/*aqui adiciona o evento de click no botão e 
+executa afunção de renderizar as perguntas*/
+btnPlay.addEventListener("click", (e) => {
+    e.preventDefault();
+    renderQuestions();
+});
 
-
-const play = () => {
+//renderizar as perguntas
+const renderQuestions = () => {
     selectDificultty();
     selectTheme();
-}
+
+    /*se o usuario nao selecionar um nivel de dificuldade é disparado um erro no console do navegador*/
+    if (dificultty === 'default') {
+        console.error({msg: 'Please select a difficulty level'});
+    }
+
+    if (dificultty === "easy") {
+        console.log(`Você selecinou ${dificultty}`);
+    } else if (dificultty === "medium") {
+        console.log(`Você selecinou ${dificultty}`);
+    } else if (dificultty === "hard") {
+        console.log(`Você selecinou ${dificultty}`);
+    }
+};

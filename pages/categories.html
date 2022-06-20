@@ -16,9 +16,20 @@
             <div>
                 <h3>Dificuldade</h3>
                 <select name="dificultty" id="dificultty__list">
-                    <option class="dificultty__item" id="easy" value="easy">Fácil</option>
-                    <option class="dificultty__item" id="medium" value="medium">Médio</option>
-                    <option class="dificultty__item" id="hard" value="hard">Dificil</option>
+                    <!-- com a opção default selecionada as perguntas não serão renderizadas -->
+                    <option class="dificultty__item" id="default" value="default">
+                        Selecione
+                    </option>
+    
+                    <option class="dificultty__item" id="easy" value="easy">
+                        Fácil
+                    </option>
+                    <option class="dificultty__item" id="medium" value="medium">
+                        Médio
+                    </option>
+                    <option class="dificultty__item" id="hard" value="hard">
+                        Dificil
+                    </option>
                 </select>
             </div>
 
@@ -28,8 +39,7 @@
                 <input class="theme__item" type="radio" name="theme" value="movie" />Cinema
                 <input class="theme__item" type="radio" name="theme" value="knowledge" />Conhecimentos Gerais
             </div>
-
-            <input onclick="play(event)" type="button" value="Jogar" />
+            <button id="btn__play">Jogar</button>
         </form>
     </div>
     <script src="../assets/scripts/mechanical.js"></script>
