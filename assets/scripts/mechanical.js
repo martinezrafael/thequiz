@@ -39,6 +39,13 @@ const questions = [
         theme: "movie",
         dificultty: "easy",
     },
+    {
+        title: "Pergunta 5",
+        description: "Descrição da pergunta 2",
+        answers: ["opção 1", "opção 2", "opção 3"],
+        theme: "movie",
+        dificultty: "medium",
+    }
 ];
 
 //opções de level que o usuário pode selecionar
@@ -83,6 +90,26 @@ btnPlay.addEventListener("click", (e) => {
     renderQuestions();
 });
 
+const movieEasy = (question) => {
+    return question.dificultty === "easy" && question.theme === 'movie';
+}
+
+const movieMedium = (question) => {
+    return question.dificultty === "medium" && question.theme === 'movie';
+}
+
+const filterQuestions = (filter) => {
+    let filteredQuestions = [];
+
+    for (let question of questions){
+        if (filter(question)){
+            filteredQuestions.push(question);
+        }
+    }
+
+    return filteredQuestions;
+}
+
 //renderizar as perguntas
 const renderQuestions = () => {
     selectDificultty();
@@ -93,11 +120,12 @@ const renderQuestions = () => {
         console.error({msg: 'Please select a difficulty level'});
     }
 
-    if (dificultty === "easy") {
-        console.log(`Você selecinou ${dificultty}`);
-    } else if (dificultty === "medium") {
-        console.log(`Você selecinou ${dificultty}`);
-    } else if (dificultty === "hard") {
-        console.log(`Você selecinou ${dificultty}`);
+    if (dificultty === 'easy' && theme === 'movie') {
+        console.log(filterQuestions(movieEasy))
+    } else if (dificultty === 'medium' && theme === 'movie') {
+        console.log(filterQuestions(movieMedium))
     }
+
+
+   
 };
