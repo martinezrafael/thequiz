@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>thequiz | Categorias</title>
+    <title>thequiz | Perguntas</title>
 
     <link rel="stylesheet" href="../assets/stylesheets/reset.css" />
 </head>
@@ -14,25 +14,25 @@
     <div class="container">
         <form action="" method="get">
             <div>
-                <h3>Level</h3>
-                <select name="level" id="level__list">
-                    <option class="levelItem" id="easy" value="easy">Fácil</option>
-                    <option class="levelItem" id="medium" value="medium">Médio</option>
-                    <option class="levelItem" id="hard" value="hard">Dificil</option>
+                <h3>Dificuldade</h3>
+                <select name="dificultty" id="dificultty__list">
+                    <option class="dificultty__item" id="easy" value="easy">Fácil</option>
+                    <option class="dificultty__item" id="medium" value="medium">Médio</option>
+                    <option class="dificultty__item" id="hard" value="hard">Dificil</option>
                 </select>
             </div>
 
-            <div>
-                <h3>Categorias</h3>
-                <input class="categorieItem" type="radio" name="category" value="music" />Música
-                <input class="categorieItem" type="radio" name="category" value="movie" />Cinema
-                <input class="categorieItem" type="radio" name="category" value="knowledge" />Conhecimentos Gerais
+            <div id="theme_list">
+                <h3>Tema</h3>
+                <input class="theme__item" type="radio" name="theme" value="music" />Música
+                <input class="theme__item" type="radio" name="theme" value="movie" />Cinema
+                <input class="theme__item" type="radio" name="theme" value="knowledge" />Conhecimentos Gerais
             </div>
 
             <input onclick="play(event)" type="button" value="Jogar" />
         </form>
     </div>
-    <script src="../assets/scripts/categories.js"></script>
+    <script src="../assets/scripts/mechanical.js"></script>
 </body>
 
 </html>
