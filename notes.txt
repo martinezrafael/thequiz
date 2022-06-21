@@ -1,10 +1,14 @@
 # array de perguntas
 
-1. Pega todas as opções de nível de dificuldade manipulando o DOM e cria um array
+1. Manipula o dom pega os itens que possuem a mesma classe com querySelectorAll e cria um array
 
-2. Cria uma variável com uma string vazia, essa variável vai receber o valor da opção de nível que o usuário selecionou
+2. Cria uma variável que recebe a função do item 1 com a classe que queremos buscar
 
-3. Cria uma função que percorre o array de nível de dificuldade, verifica se alguma posição tem o valor de selected como true, pega o value dessa posição e coloca na variável criada na opção 2
+3. Cria uma variável com uma string vazia, essa variável vai receber o valor da opção de nível que o usuário selecionou
 
-4. Repete os passos 1, 2 e 3 para as opções de tema
+4. Cria uma função que percorre o array de nível de dificuldade, verifica se alguma posição tem o valor de selected como true, pega o value dessa posição e coloca na variável criada na opção 3
+
+5. Repete os passos 1, 2, 3 e 4 para as opções de tema
+
+6. Executa as funções criadas nos itens anteriores
 

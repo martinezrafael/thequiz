@@ -1,5 +1,6 @@
 "use strict";
 
+//questions
 const questions = [
     {
         title: "Pergunta 1",
@@ -66,22 +67,13 @@ const questions = [
     },
 ];
 
+
 const createAnArray = (className) => {
     return document.querySelectorAll(className);
 }
 
-// const traverseTheArray = (arr, value) => {
-//     for (element of arr) {
-//         if (element.selected) {
-//             value = element.value;
-//         }
-//     }
-// }
-
 const difficulties = createAnArray(".dificultty__item")
 let dificultty = "";
-
-
 
 const selectDificultty = () => {
     for (let difficultyOption of difficulties) {

@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "reset.css",
+	"sources": [
+		"../scss/reset.scss"
+	],
+	"sourcesContent": [
+		"* {\r\n  box-sizing: border-box;\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n}\r\n\r\nul {\r\n  li {\r\n    list-style: none;\r\n  }\r\n}"
+	],
+	"names": [],
+	"mappings": ";AAAA,AAAA,CAAC,CAAC;EACA,UAAU,EAAE,UAAU;EACtB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACX;;;AAED,AAAA,CAAC,CAAC;EACA,eAAe,EAAE,IAAI;CACtB;;;AAED,AACE,EADA,CACA,EAAE,CAAC;EACD,UAAU,EAAE,IAAI;CACjB"
+}
