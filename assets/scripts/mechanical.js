@@ -66,9 +66,21 @@ const questions = [
     },
 ];
 
+const createAnArray = (className) => {
+    return document.querySelectorAll(className);
+}
 
-const difficulties = document.querySelectorAll(".dificultty__item");
+// const traverseTheArray = (arr, value) => {
+//     for (element of arr) {
+//         if (element.selected) {
+//             value = element.value;
+//         }
+//     }
+// }
+
+const difficulties = createAnArray(".dificultty__item")
 let dificultty = "";
+
 
 
 const selectDificultty = () => {
@@ -79,8 +91,7 @@ const selectDificultty = () => {
     }
 };
 
-
-const themes = document.querySelectorAll(".theme__item");
+const themes = createAnArray(".theme__item");
 let theme = "";
 
 
@@ -116,8 +127,9 @@ const filterQuestions = (filter) => {
 
 const renderQuestions = () => {
     let error = dificultty !== "default" ? null : "Algo de errado não está certo";
-    
+
     let checkedDificultty = dificultty === 'easy' || dificultty === 'medium' || dificultty === 'hard' ? true : false;
+    
     let checkedTheme = theme === 'music' || theme === 'movie' || theme === 'knowledge' ? true : false;
 
     let returnFiltered = console.log(filterQuestions(getDificulttyAndTheme));

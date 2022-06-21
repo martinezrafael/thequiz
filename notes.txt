@@ -1,0 +1,10 @@
+# array de perguntas
+
+1. Pega todas as opções de nível de dificuldade manipulando o DOM e cria um array
+
+2. Cria uma variável com uma string vazia, essa variável vai receber o valor da opção de nível que o usuário selecionou
+
+3. Cria uma função que percorre o array de nível de dificuldade, verifica se alguma posição tem o valor de selected como true, pega o value dessa posição e coloca na variável criada na opção 2
+
+4. Repete os passos 1, 2 e 3 para as opções de tema
+
