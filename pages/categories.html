@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>thequiz | Perguntas</title>
 
-    <link rel="stylesheet" href="../assets/stylesheets/reset.css" />
+    <link rel="stylesheet" href="../assets/stylesheets/css/reset.css" />
 </head>
 
 <body>
@@ -20,7 +20,7 @@
                     <option class="dificultty__item" id="default" value="default">
                         Selecione
                     </option>
-    
+
                     <option class="dificultty__item" id="easy" value="easy">
                         Fácil
                     </option>
@@ -35,9 +35,13 @@
 
             <div id="theme_list">
                 <h3>Tema</h3>
-                <input class="theme__item" type="radio" name="theme" value="music" />Música
-                <input class="theme__item" type="radio" name="theme" value="movie" />Cinema
-                <input class="theme__item" type="radio" name="theme" value="knowledge" />Conhecimentos Gerais
+                <select name="theme" id="theme_list">
+                    <option value="music" class="theme__item">Música</option>
+                    <option value="movie" class="theme__item">Cinema</option>
+                    <option value="knowledge" class="theme__item">
+                        Conhecimentos Gerais
+                    </option>
+                </select>
             </div>
             <button id="btn__play">Jogar</button>
         </form>

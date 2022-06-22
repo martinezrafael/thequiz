@@ -75,6 +75,8 @@ const createAnArray = (className) => {
 const difficulties = createAnArray(".dificultty__item")
 let dificultty = "";
 
+
+
 const selectDificultty = () => {
     for (let difficultyOption of difficulties) {
         if (difficultyOption.selected) {
@@ -89,7 +91,7 @@ let theme = "";
 
 const selectTheme = () => {
     for (let themeOption of themes) {
-        if (themeOption.checked) {
+        if (themeOption.selected) {
             theme = themeOption.value;
         }
     }

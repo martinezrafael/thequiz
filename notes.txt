@@ -1,4 +1,4 @@
-# array de perguntas
+# temos um array de perguntas
 
 1. Manipula o dom pega os itens que possuem a mesma classe com querySelectorAll e cria um array
 
