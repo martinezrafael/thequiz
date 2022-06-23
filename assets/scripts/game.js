@@ -1,4 +1,4 @@
-"use strict";
+"use strict"; 
 
 //questions
 const questions = [
@@ -65,77 +65,76 @@ const questions = [
         theme: "knowledge",
         dificultty: "hard",
     },
+    {
+        title: "Pergunta 10",
+        description: "Descrição da pergunta 10",
+        answers: ["opção 1", "opção 2", "opção 3"],
+        theme: "knowledge",
+        dificultty: "hard",
+    },
 ];
 
-
-const createAnArray = (className) => {
+const createArrayDOM = (className) => {
     return document.querySelectorAll(className);
 }
 
-const difficulties = createAnArray(".dificultty__item")
-let dificultty = "";
+const difficulties = createArrayDOM(".dificultty__item")
+const themes = createArrayDOM(".theme__item");
 
+const getItemArrDOM = (arr) => {
+    let itemSelected = ''
 
-
-const selectDificultty = () => {
-    for (let difficultyOption of difficulties) {
-        if (difficultyOption.selected) {
-            dificultty = difficultyOption.value;
+    arr.forEach(item => {
+        if (item.selected) {
+            itemSelected = item.value;
         }
-    }
-};
+    })
 
-const themes = createAnArray(".theme__item");
-let theme = "";
+    return itemSelected;
+}
 
+const filterArr = (arr) => {
 
-const selectTheme = () => {
-    for (let themeOption of themes) {
-        if (themeOption.selected) {
-            theme = themeOption.value;
-        }
-    }
-};
+    let newArr = [];
 
-
-const getDificulttyAndTheme = (question) => {
-    selectDificultty();
-    selectTheme();
-    return (
-        question.dificultty === `${dificultty}` && question.theme === `${theme}`
-    );
-};
-
-const filterQuestions = (filter) => {
-    let filteredQuestions = [];
-
-    for (let question of questions) {
-        if (filter(question)) {
-            filteredQuestions.push(question);
+    for (let indexElement of arr) {
+        if (indexElement.dificultty === getItemArrDOM(difficulties) && indexElement.theme === getItemArrDOM(themes)) {
+            newArr.push(indexElement)
         }
     }
 
-    return filteredQuestions;
-};
+    return newArr;
+}
 
 
-const renderQuestions = () => {
-    let error = dificultty !== "default" ? null : "Algo de errado não está certo";
+const renderArr = () => {
+    let newArr = filterArr(questions);
+    let container = document.getElementById('questions__container')
 
-    let checkedDificultty = dificultty === 'easy' || dificultty === 'medium' || dificultty === 'hard' ? true : false;
-    
-    let checkedTheme = theme === 'music' || theme === 'movie' || theme === 'knowledge' ? true : false;
+    container.innerHTML = newArr.map(element => {
+         return  `
+            <div>
+                <h2 class='question__title'>${element.title}</h2>
+                <p class='question__description'>${element.description}</p>
+                <ul class='question__answers'>
+                    ${element.answers.map(answer => {
+                        return`<li class='question__answer'><a href='#'>${answer}</a></li>`
+                    })}
+                </ul>
+                <div class='question__footer'>
+                    <span class='question__tag'>${element.theme}</span>
+                    <span class='question__tag'>${element.dificultty}</span>
+                </div>
+            </div>
+        `
+    })
+       
+}
 
-    let returnFiltered = console.log(filterQuestions(getDificulttyAndTheme));
 
-    checkedDificultty && checkedTheme ? returnFiltered : error;
-};
+const play = document.getElementById("btn__play");
 
-
-const btnPlay = document.getElementById("btn__play");
-
-
-btnPlay.addEventListener("click", (e) => {
+play.addEventListener("click", (e) => {
     e.preventDefault();
-    renderQuestions();
+    renderArr();
 });
