@@ -12,84 +12,84 @@ const createQuestion = (title, description, answers, theme, dificultty) => {
 
 const questions = [
     createQuestion(
-        "Pergunta 1",
+        "Titulo hsjhd",
         "Descrição da pergunta 1",
         ["opção 1", "opção 2", "opção 3"],
         "Música",
         "Fácil"
     ),
     createQuestion(
-        "Pergunta 2",
+        "Titulo asghjas",
         "Descrição da pergunta 2",
         ["opção 1", "opção 2", "opção 3"],
         "Música",
         "Médio"
     ),
     createQuestion(
-        "Pergunta 3",
+        "Titulo dsffsd",
         "Descrição da pergunta 3",
         ["opção 1", "opção 2", "opção 3"],
         "Música",
         "Difícil"
     ),
     createQuestion(
-        "Pergunta 4",
+        "Pergunta sdfsd",
         "Descrição da pergunta 4",
         ["opção 1", "opção 2", "opção 3"],
         "Filmes",
         "Fácil"
     ),
     createQuestion(
-        "Pergunta 5",
+        "Pergunta sdffds",
         "Descrição da pergunta 5",
         ["opção 1", "opção 2", "opção 3"],
         "Filmes",
         "Médio"
     ),
     createQuestion(
-        "Pergunta 6",
+        "Pergunta desfdd",
         "Descrição da pergunta 6",
         ["opção 1", "opção 2", "opção 3"],
         "Filmes",
         "Difícil"
     ),
     createQuestion(
-        "Pergunta 7",
+        "Pergunta dfsf",
         "Descrição da pergunta 7",
         ["opção 1", "opção 2", "opção 3"],
         "Conhecimentos Gerais",
         "Fácil"
     ),
     createQuestion(
-        "Pergunta 8",
+        "Pergunta dfsfs",
         "Descrição da pergunta 8",
         ["opção 1", "opção 2", "opção 3"],
         "Conhecimentos Gerais",
         "Médio"
     ),
     createQuestion(
-        "Pergunta 9",
+        "Pergunta fsdf",
         "Descrição da pergunta 9",
         ["opção 1", "opção 2", "opção 3"],
         "Conhecimentos Gerais",
         "Difícil"
     ),
     createQuestion(
-        "Pergunta 10",
+        "Pergunta 1dsf",
         "Descrição da pergunta 10",
         ["opção 1", "opção 2", "opção 3"],
         "Conhecimentos Gerais",
         "Difícil"
     ),
     createQuestion(
-        "Pergunta 11",
+        "Pergunta sdfsf",
         "Descrição da pergunta 11",
         ["opção 1", "opção 2", "opção 3"],
         "Conhecimentos Gerais",
         "Fácil"
     ),
     createQuestion(
-        "Pergunta 12",
+        "Pergunta dfggdf",
         "Descrição da pergunta 12",
         ["opção 1", "opção 2", "opção 3"],
         "Conhecimentos Gerais",
@@ -97,11 +97,6 @@ const questions = [
     ),
 ];
 
-
-
-const upper = (str) => {
-    return str.toUpperCase();
-}
 
 const createArrayDOM = (className) => {
     return document.querySelectorAll(className);
@@ -151,20 +146,14 @@ const renderArr = () => {
                     })}
                 </ul>
                 <div class='question__footer'>
-                    <span class='question__tag'>${upper(element.theme)}</span> |
-                    <span class='question__tag'>${upper(element.dificultty)}</span>
+                    <span class='question__tag'>${element.theme}</span> |
+                    <span class='question__tag'>${element.dificultty}</span>
                 </div>
             </div>
         `
     })
        
 }
-
-// questions.forEach(question => {
-//     question.dificultty = 'default';
-//     console.log(question);
-// })
-
 
 const play = document.getElementById("btn__play");
 
