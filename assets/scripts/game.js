@@ -12,25 +12,25 @@ const createQuestion = (title, description, answers, theme, dificultty) => {
 
 const questions = [
     createQuestion(
-        "Titulo hsjhd",
-        "Descrição da pergunta 1",
-        ["opção 1", "opção 2", "opção 3"],
+        "Baby One More Time",
+        "Quantos anos tinha Britney Spears quando seu hit 'Baby One More Time' foi lançado em 1998?",
+        ["17", "16", "20"],
         "Música",
         "Fácil"
     ),
     createQuestion(
-        "Titulo asghjas",
-        "Descrição da pergunta 2",
-        ["opção 1", "opção 2", "opção 3"],
+        "Celine Dion",
+        "Qual é a outra língua que Celine Dion cantou regularmente ao longo dos anos 90?",
+        ["Francês", "Espanhol", "Português"],
         "Música",
-        "Médio"
+        "Fácil"
     ),
     createQuestion(
-        "Titulo dsffsd",
-        "Descrição da pergunta 3",
-        ["opção 1", "opção 2", "opção 3"],
+        "Música Latina",
+        "Jennifer Lopez, Ricky Martin e outros contribuíram para qual movimento musical no final dos anos 90?",
+        ["A Explosão Latina", "Latin Music", "Mambo Dance Music"],
         "Música",
-        "Difícil"
+        "Fácil"
     ),
     createQuestion(
         "Pergunta sdfsd",
@@ -142,22 +142,30 @@ const renderArr = () => {
                 <p class='question__description'>${element.description}</p>
                 <ul class='question__answers'>
                     ${element.answers.map(answer => {
-                        return `<li class='question__answer'><a href='#'>${answer}</a></li>`
+                        return `<li class='question__answer'>${answer}</li>`
                     })}
                 </ul>
-                <div class='question__footer'>
-                    <span class='question__tag'>${element.theme}</span> |
-                    <span class='question__tag'>${element.dificultty}</span>
-                </div>
             </div>
         `
     })
        
 }
 
+const getAnswers = (event) => {
+    let answers = createArrayDOM('.question__answer');
+
+    answers.forEach(answer => {
+        console.log(answer);
+    })
+
+}
+
+
+
 const play = document.getElementById("btn__play");
 
 play.addEventListener("click", (e) => {
     e.preventDefault();
     renderArr();
+    getAnswers();
 });
