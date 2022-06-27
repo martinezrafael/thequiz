@@ -1,13 +1,14 @@
-"use strict"; 
+"use strict";
 
 //funcao que retorna uma pergunta
-const createQuestion = (title, description, answers, theme, dificultty) => {
+const createQuestion = (title, description, answers, theme, dificultty, correctAnswer) => {
     return {
         title: title,
         description: description,
         answers: answers,
         theme: theme,
-        dificultty: dificultty
+        dificultty: dificultty,
+        correctAnswer: correctAnswer
     }
 }
 
@@ -18,14 +19,16 @@ const questions = [
         "Quantos anos tinha Britney Spears quando seu hit 'Baby One More Time' foi lançado em 1998?",
         ["17", "16", "20"],
         "music",
-        "easy"
+        "easy",
+        "17"
     ),
     createQuestion(
         "Celine Dion",
         "Qual é a outra língua que Celine Dion cantou regularmente ao longo dos anos 90?",
         ["Francês", "Espanhol", "Português"],
         "music",
-        "easy"
+        "easy",
+        "Francês"
     ),
     createQuestion(
         "Música Latina",
@@ -136,28 +139,60 @@ const filterQuestions = (arr) => {
    return newArr;
 }
 
+
+const createAnswersElement = (arr, questionIndex) => {
+    let answer = '';
+
+    arr.forEach((element, index) => {
+        answer += `<li class='question__answer answer-${index} question-${questionIndex}'>${element.answers}</li>`
+    })
+
+    return answer;
+}
+
+
 const createQuestionElement = (callback) => {
     let receivedCallback = callback
     let container = document.getElementById('questions__container');
 
-    container.innerHTML = receivedCallback.map(indexElement => {
+    container.innerHTML = receivedCallback.forEach((element, index) => {
         return `
-            <div class='question_container'>
-                <h2>${indexElement.title}</h2>
-                <p>${indexElement.description}</p>
-                <ul>${indexElement.answers.map(answer => `<li class='answer'>${answer}</li>`)}</ul>
+            <div class='question'>
+                <h2 class='question__title'>${element.title}</h2>
+                <p class='question__description'>${element.description}</p>
+                <ul class='question__answers'>${createAnswersElement(questions.answers, index)}</ul>
             </div>
         
         `
     });
     
 }
- 
+
+
+// const createQuestionElement = (callback) => {
+//     let receivedCallback = callback
+//     let container = document.getElementById('questions__container');
+
+//     container.innerHTML = receivedCallback.map(element => {
+//         return `
+//             <div class='question'>
+//                 <h2 class='question__title'>${element.title}</h2>
+//                 <p class='question__description'>${element.description}</p>
+//                 <ul class='question__answers'>${element.answers.map(answer => `<li class='question__answer' onClick='checkAnswer(event)'>${answer}</li>`)}</ul>
+//             </div>
+        
+//         `
+//     });
+    
+// }
+
+
 const renderQuestionElement = (callback) => {
     setTimeout(() => {
         createQuestionElement(filterQuestions(questions))
     }, 600);
 }
+
 
 const play = document.getElementById("btn__play");
 
@@ -167,6 +202,10 @@ play.addEventListener("click", (e) => {
 });
 
 
+
+//verificando as respostas selecionadas e atribuindo a pontruação
+
+//perguntas renderizadas
 
 
 
