@@ -1,5 +1,6 @@
 "use strict"; 
 
+//funcao que retorna uma pergunta
 const createQuestion = (title, description, answers, theme, dificultty) => {
     return {
         title: title,
@@ -10,103 +11,106 @@ const createQuestion = (title, description, answers, theme, dificultty) => {
     }
 }
 
+//array de perguntas criadas com a funcao createQuestion
 const questions = [
     createQuestion(
         "Baby One More Time",
         "Quantos anos tinha Britney Spears quando seu hit 'Baby One More Time' foi lançado em 1998?",
         ["17", "16", "20"],
-        "Música",
-        "Fácil"
+        "music",
+        "easy"
     ),
     createQuestion(
         "Celine Dion",
         "Qual é a outra língua que Celine Dion cantou regularmente ao longo dos anos 90?",
         ["Francês", "Espanhol", "Português"],
-        "Música",
-        "Fácil"
+        "music",
+        "easy"
     ),
     createQuestion(
         "Música Latina",
         "Jennifer Lopez, Ricky Martin e outros contribuíram para qual movimento musical no final dos anos 90?",
         ["A Explosão Latina", "Latin Music", "Mambo Dance Music"],
-        "Música",
-        "Fácil"
+        "music",
+        "easy"
     ),
     createQuestion(
         "Pergunta sdfsd",
         "Descrição da pergunta 4",
         ["opção 1", "opção 2", "opção 3"],
-        "Filmes",
-        "Fácil"
+        "music",
+        "easy"
     ),
     createQuestion(
         "Pergunta sdffds",
         "Descrição da pergunta 5",
         ["opção 1", "opção 2", "opção 3"],
-        "Filmes",
-        "Médio"
+        "movies",
+        "medium"
     ),
     createQuestion(
         "Pergunta desfdd",
         "Descrição da pergunta 6",
         ["opção 1", "opção 2", "opção 3"],
-        "Filmes",
-        "Difícil"
+        "movies",
+        "hard"
     ),
     createQuestion(
         "Pergunta dfsf",
         "Descrição da pergunta 7",
         ["opção 1", "opção 2", "opção 3"],
-        "Conhecimentos Gerais",
-        "Fácil"
+        "general_knowledge",
+        "easy"
     ),
     createQuestion(
         "Pergunta dfsfs",
         "Descrição da pergunta 8",
         ["opção 1", "opção 2", "opção 3"],
-        "Conhecimentos Gerais",
-        "Médio"
+        "general_knowledge",
+        "medium"
     ),
     createQuestion(
         "Pergunta fsdf",
         "Descrição da pergunta 9",
         ["opção 1", "opção 2", "opção 3"],
-        "Conhecimentos Gerais",
-        "Difícil"
+        "general_knowledge",
+        "hard"
     ),
     createQuestion(
         "Pergunta 1dsf",
         "Descrição da pergunta 10",
         ["opção 1", "opção 2", "opção 3"],
-        "Conhecimentos Gerais",
-        "Difícil"
+        "general_knowledge",
+        "hard"
     ),
     createQuestion(
         "Pergunta sdfsf",
         "Descrição da pergunta 11",
         ["opção 1", "opção 2", "opção 3"],
-        "Conhecimentos Gerais",
-        "Fácil"
+        "general_knowledge",
+        "easy"
     ),
     createQuestion(
         "Pergunta dfggdf",
         "Descrição da pergunta 12",
         ["opção 1", "opção 2", "opção 3"],
-        "Conhecimentos Gerais",
-        "Fácil"
+        "general_knowledge",
+        "easy"
     ),
 ];
 
-
+//funcao que cria um arrai com o que retorna da manipulação DOM com querySelectorAll através da classe do elemento
 const createArrayDOM = (className) => {
     return document.querySelectorAll(className);
 }
 
-const difficulties = createArrayDOM(".dificultty__item")
+//instancias da função createArrayDOM, criando arrays com os níveis de dificuldade e temas que o usuário pode escolher
+const difficulties = createArrayDOM(".dificultty__item");
 const themes = createArrayDOM(".theme__item");
 
+//funcao que identifica quais items o usuário selecionou dentro de um array criado com a funcao createArrayDOM
 const getItemArrDOM = (arr) => {
-    let itemSelected = ''
+    let itemSelected = '';
 
     arr.forEach(item => {
         if (item.selected) {
@@ -118,54 +122,52 @@ const getItemArrDOM = (arr) => {
     return itemSelected;
 }
 
-const filterArr = (arr) => {
+//funcao que filtra as perguntas no array de perguntas de acordo com o tema e o nível de dificuldade que o usuário escolheu
+const filterQuestions = (arr) => {
 
     let newArr = [];
 
     for (let indexElement of arr) {
         if (indexElement.dificultty === getItemArrDOM(difficulties) && indexElement.theme === getItemArrDOM(themes)) {
             newArr.push(indexElement)
-        }
+        } 
     }
 
-    return newArr;
+   return newArr;
 }
 
-const renderArr = () => {
-    let newArr = filterArr(questions);
-    let container = document.getElementById('questions__container')
+const createQuestionElement = (callback) => {
+    let receivedCallback = callback
+    let container = document.getElementById('questions__container');
 
-    container.innerHTML = newArr.map(element => {
-         return  `
-            <div>
-                <h2 class='question__title'>${element.title}</h2>
-                <p class='question__description'>${element.description}</p>
-                <ul class='question__answers'>
-                    ${element.answers.map(answer => {
-                        return `<li class='question__answer'>${answer}</li>`
-                    })}
-                </ul>
+    container.innerHTML = receivedCallback.map(indexElement => {
+        return `
+            <div class='question_container'>
+                <h2>${indexElement.title}</h2>
+                <p>${indexElement.description}</p>
+                <ul>${indexElement.answers.map(answer => `<li class='answer'>${answer}</li>`)}</ul>
             </div>
+        
         `
-    })
-       
+    });
+    
 }
-
-const getAnswers = (event) => {
-    let answers = createArrayDOM('.question__answer');
-
-    answers.forEach(answer => {
-        console.log(answer);
-    })
-
+ 
+const renderQuestionElement = (callback) => {
+    setTimeout(() => {
+        createQuestionElement(filterQuestions(questions))
+    }, 600);
 }
-
-
 
 const play = document.getElementById("btn__play");
 
 play.addEventListener("click", (e) => {
     e.preventDefault();
-    renderArr();
-    getAnswers();
+    renderQuestionElement();
 });
+
+
+
+
+
+
