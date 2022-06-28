@@ -20,7 +20,7 @@ const questions = [
         ["17", "16", "20"],
         "music",
         "easy",
-        "17"
+        "alternative-1"
     ),
     createQuestion(
         "Celine Dion",
@@ -155,36 +155,18 @@ const createQuestionElement = (callback) => {
     let receivedCallback = callback
     let container = document.getElementById('questions__container');
 
-    container.innerHTML = receivedCallback.forEach((element, index) => {
+    container.innerHTML = receivedCallback.map(element => {
         return `
             <div class='question'>
                 <h2 class='question__title'>${element.title}</h2>
                 <p class='question__description'>${element.description}</p>
-                <ul class='question__answers'>${createAnswersElement(questions.answers, index)}</ul>
+                <ul class='question__answers'>${element.answers.map(answer => `<li class='question__answer' onClick='checkAnswer(event)'>${answer}</li>`)}</ul>
             </div>
         
         `
     });
     
 }
-
-
-// const createQuestionElement = (callback) => {
-//     let receivedCallback = callback
-//     let container = document.getElementById('questions__container');
-
-//     container.innerHTML = receivedCallback.map(element => {
-//         return `
-//             <div class='question'>
-//                 <h2 class='question__title'>${element.title}</h2>
-//                 <p class='question__description'>${element.description}</p>
-//                 <ul class='question__answers'>${element.answers.map(answer => `<li class='question__answer' onClick='checkAnswer(event)'>${answer}</li>`)}</ul>
-//             </div>
-        
-//         `
-//     });
-    
-// }
 
 
 const renderQuestionElement = (callback) => {
