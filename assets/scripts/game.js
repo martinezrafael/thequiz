@@ -83,12 +83,23 @@ const createQuestion = (callback) => {
             <p class='questions__description'>${question.description}</p>
             <ul>
                 ${question.answers.map((answer, index) => {
-                    return `<li class='question__answer question-${questionIndex} alternative-${index}'>${answer}</li>`
+                    return `<li class='question__answer question-${questionIndex} alternative-${index}' onClick='checkAnswer(event)'>${answer}</li>`
                 })}
             </ul>
         </div>
        `
     })
+}
+
+
+const checkAnswer = (event) => {
+
+    let targetClass = event.target.className;
+
+    let questionTarget = targetClass.split(' ')[1];
+    let answerTarget = targetClass.split(' ')[2];
+
+   
 }
 
 const renderQuestionElement = (callback) => {
