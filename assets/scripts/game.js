@@ -6,28 +6,37 @@ const questions = [
         description: 'Descrição da Pergunta 1',
         answers:['opcao 1','opcao 2','opcao 3'],
         theme: 'music',
-        dificultty: 'easy',
+        dificultty: 'default',
         correctAnswer: 'alternative-0'
 
     },
     {
         title: 'Pergunta 2',
         description: 'Descrição da Pergunta 2',
-        answers:['opcao 1','opcao 2','opcao 3'],
+        answers:['opcao 4','opcao 5','opcao 6'],
         theme: 'music',
-        dificultty: 'medium',
+        dificultty: 'default',
         correctAnswer: 'alternative-1'
 
     },
     {
         title: 'Pergunta 3',
         description: 'Descrição da Pergunta 3',
-        answers:['opcao 1','opcao 2','opcao 3'],
+        answers:['opcao 7','opcao 8','opcao 9'],
         theme: 'music',
-        dificultty: 'hard',
+        dificultty: 'default',
         correctAnswer: 'alternative-2'
 
-    }
+    },
+    {
+        title: 'Pergunta 3',
+        description: 'Descrição da Pergunta 3',
+        answers:['opcao 10','opcao 11','opcao 12'],
+        theme: 'music',
+        dificultty: 'default',
+        correctAnswer: 'alternative-2'
+
+    },
 ]
 
 const createArrayDOM = (className) => {
@@ -63,33 +72,28 @@ const filterQuestions = (arr) => {
    return newArr;
 }
 
+const createQuestion = (callback) => {
 
-
-const createQuestionElement = (callback) => {
-    let receivedCallback = callback
     let container = document.getElementById('questions__container');
 
-    container.innerHTML = receivedCallback.map((element) => {
-        return `
-            <div class='question'>
-                <h2 class='question__title'>${element.title}</h2>
-                <p class='question__description'>${element.description}</p>
-                <ul class='question__answers'>
-                    ${callback.map(answer => {
-                        return `<li>${answer}</li>`
-                    })}
-                </ul>
-            </div>
-        
-        `
-    });
-    
+    container.innerHTML = callback.map((question, questionIndex) => {
+       return `
+        <div class='question'>
+            <h2 class='questions__title'>${question.title}</h2>
+            <p class='questions__description'>${question.description}</p>
+            <ul>
+                ${question.answers.map((answer, index) => {
+                    return `<li class='question__answer question-${questionIndex} alternative-${index}'>${answer}</li>`
+                })}
+            </ul>
+        </div>
+       `
+    })
 }
-
 
 const renderQuestionElement = (callback) => {
     setTimeout(() => {
-        createQuestionElement(filterQuestions(questions))
+        createQuestion(filterQuestions(questions))
     }, 600);
    
 }
@@ -100,14 +104,3 @@ play.addEventListener("click", (e) => {
     e.preventDefault();
     renderQuestionElement();
 });
-
-
-
-//verificando as respostas selecionadas e atribuindo a pontruação
-
-//perguntas renderizadas
-
-//pegar o value do target e verificar se é igual ao answerCorrect
-
-//mas precisa pegar tamb´´em o index do target e o index da pergunta
-
