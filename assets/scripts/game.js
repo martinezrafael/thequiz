@@ -24,7 +24,7 @@ const questions = [
         answers:['opcao 7','opcao 8','opcao 9'],
         theme: 'music',
         dificultty: 'default',
-        correctAnswer: 'alternative-3'
+        correctAnswer: 'alternative-2'
 
     },
     {
@@ -100,6 +100,15 @@ const createQuestion = (callback) => {
 }
 
 
+
+let score = 0;
+
+const showScore = (score) => {
+    if(score >= 20) {
+        return `<div>Your iscore ${score}</div>`
+    }
+}
+
 const checkAnswer = (event) => {
 
     let targetClass = event.target.className;
@@ -107,17 +116,20 @@ const checkAnswer = (event) => {
     let targetQuestionClass = Number(targetClass.split(' ')[1].split('-')[1]);
     let targetAnswerClass = targetClass.split(' ')[2];
 
+
     questions.forEach((question, index) => {
+
         question.index = index;
         
         if (question.index === targetQuestionClass && question.correctAnswer === targetAnswerClass) {
-            return true;
-        } else {
-            return false;
-        }
-
+          score = score + 10;
+        } 
     })
+
+    let scoreContainer = document.getElementById('score__container');
+    scoreContainer.innerHTML = showScore(score);
 }
+
 
 
 
