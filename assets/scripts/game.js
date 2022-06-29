@@ -168,7 +168,7 @@ const showScore = () => {
         if (score >= 0 && score < 70) {
            container.innerHTML = `
             <div>
-                <button id="btn__reset" onClick='reset()'>Jogar novamente</button>
+                <button onClick='reset()'>Jogar novamente</button>
                 <h2>Não foi desta vez, você fez apenas ${score} pontos!</h2>
 
                 <div>
@@ -178,7 +178,7 @@ const showScore = () => {
            `
         } else if (score >= 70) {
             container.innerHTML = `
-            <button id="btn__reset" onClick='reset()'>Jogar novamente</button>
+            <button onClick='reset()'>Jogar novamente</button>
             <div>
                 <h2>Uhull que sucesso, você fez ${score} pontos!</h2>
 
@@ -193,11 +193,7 @@ const showScore = () => {
 
 
 const reset = () => {
-    const btnReset = document.getElementById('btn__reset');
-
-    btnReset.addEventListener('click', () => {
-        location.reload();
-    })
+    location.reload();
 }
 
 const checkClicked = (target) => {
