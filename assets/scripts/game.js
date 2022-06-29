@@ -94,6 +94,11 @@ const questions = [
 
 
 
+let container = document.getElementById('questions__container');
+let clickCount = 0;
+let score = 0;
+
+
 const createArrayDOM = (className) => {
     return document.querySelectorAll(className);
 }
@@ -153,30 +158,53 @@ const disabledQuestion = (event) => {
         let getQuestion = event.target.parentNode;
         getQuestion.style.pointerEvents = 'none';
         getQuestion.style.opacity = '0.4';
-        getQuestion.style.cursor = 'none';
     }
+
     
 }
 
-let score = 0;
+
+
+const reset = () => {
+    btnReset.addEventListener('click', () => {
+        location.reload();
+    })
+}
 
 const showScore = () => {
-    let initialScore = document.getElementById('score__container');
-    initialScore.innerHTML = `<span>Você já fez ${score} pontos!</span>`;
+    if (clickCount >= 10) {
+        if (score >= 0 && score < 100) {
+           container.innerHTML = `
+            <div>
+                <h2>Não foi desta vez, você fez apenas ${score} pontos!</h2>
 
-    let container = document.getElementById('questions__container');
-
-    if (score === 100) {
-        container.innerHTML = `<div>
-            <h2>Uau! você fez ${score} pontos! Você é um vencedor!</h2>
-            <div style="width:100%;height:0;padding-bottom:100%;position:relative;">
-                <iframe src="https://giphy.com/embed/lnyPptAfGwHeTdoQDk" width="60%" height="400" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                <div>
+                    <div style="width:100%;height:0;padding-bottom:83%;position:relative;"><iframe src="https://giphy.com/embed/lWPpTGShahMiGD58Sx" width="80%" height="500" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/theoffice-lWPpTGShahMiGD58Sx">via GIPHY</a></p>
+                    </div>
             </div>
-        </div>`;
+           `
+        } else if (score >= 100) {
+            container.innerHTML = `
+            <div>
+                <h2>Uhull que sucesso, você fez ${score} pontos!</h2>
 
-        initialScore.style.display = 'none';
+                <div>
+                    <div style="width:100%;height:0;padding-bottom:83%;position:relative;"><iframe src="https://giphy.com/embed/o75ajIFH0QnQC3nCeD" width="80%" height="500" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/theoffice-o75ajIFH0QnQC3nCeD">via GIPHY</a></p>
+                </div>
+           `
+        }
     }
+
     
+};
+
+
+
+const checkClicked = (target) => {
+    if (target) {
+        clickCount++;
+        console.log(clickCount);
+    }
 }
 
 const checkAnswer = (event) => {
@@ -185,7 +213,8 @@ const checkAnswer = (event) => {
 
     let targetQuestionClass = Number(targetClass.split(' ')[1].split('-')[1]);
     let targetAnswerClass = targetClass.split(' ')[2];
-  
+
+   checkClicked(targetAnswerClass);
    disabledQuestion(event);
 
     questions.forEach((question, index) => {
@@ -194,13 +223,13 @@ const checkAnswer = (event) => {
         
         if (question.index === targetQuestionClass && question.correctAnswer === targetAnswerClass) {
           score += 10;
-          showScore(score);
-        } 
+        }
     })
 
-   
-
+    showScore(score);
 }
+
+
 
 const renderQuestionElement = (callback) => {
     setTimeout(() => {
