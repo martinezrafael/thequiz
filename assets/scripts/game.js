@@ -163,28 +163,22 @@ const disabledQuestion = (event) => {
     
 }
 
-
-
-const reset = () => {
-    btnReset.addEventListener('click', () => {
-        location.reload();
-    })
-}
-
 const showScore = () => {
     if (clickCount >= 10) {
         if (score >= 0 && score < 100) {
            container.innerHTML = `
             <div>
+                <button id="btn__reset" onClick='reset()'>Jogar novamente</button>
                 <h2>Não foi desta vez, você fez apenas ${score} pontos!</h2>
 
                 <div>
                     <div style="width:100%;height:0;padding-bottom:83%;position:relative;"><iframe src="https://giphy.com/embed/lWPpTGShahMiGD58Sx" width="80%" height="500" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/theoffice-lWPpTGShahMiGD58Sx">via GIPHY</a></p>
                     </div>
-            </div>
+                </div> 
            `
         } else if (score >= 100) {
             container.innerHTML = `
+            <button id="btn__reset" onClick='reset()'>Jogar novamente</button>
             <div>
                 <h2>Uhull que sucesso, você fez ${score} pontos!</h2>
 
@@ -193,12 +187,18 @@ const showScore = () => {
                 </div>
            `
         }
+        play.style.display = 'none';
     }
-
-    
 };
 
 
+const reset = () => {
+    const btnReset = document.getElementById('btn__reset');
+
+    btnReset.addEventListener('click', () => {
+        location.reload();
+    })
+}
 
 const checkClicked = (target) => {
     if (target) {
@@ -228,8 +228,6 @@ const checkAnswer = (event) => {
 
     showScore(score);
 }
-
-
 
 const renderQuestionElement = (callback) => {
     setTimeout(() => {
