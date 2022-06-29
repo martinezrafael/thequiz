@@ -165,7 +165,7 @@ const disabledQuestion = (event) => {
 
 const showScore = () => {
     if (clickCount >= 10) {
-        if (score >= 0 && score < 100) {
+        if (score >= 0 && score < 70) {
            container.innerHTML = `
             <div>
                 <button id="btn__reset" onClick='reset()'>Jogar novamente</button>
@@ -176,7 +176,7 @@ const showScore = () => {
                     </div>
                 </div> 
            `
-        } else if (score >= 100) {
+        } else if (score >= 70) {
             container.innerHTML = `
             <button id="btn__reset" onClick='reset()'>Jogar novamente</button>
             <div>
