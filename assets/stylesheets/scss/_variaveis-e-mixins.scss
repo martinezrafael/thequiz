@@ -33,13 +33,20 @@ $color-white: #fff;
   }
 }
 
+//Responsividade
 
-
-//16px - paragrafo confirmação de cadastro / link para login na página de confirmação de cadastro / texto links rodapé/texto do card/menu-desktop
-//20px - texto botão/texto nome categorias/texto perguntas/ texto label formulário
-//28px - texto menu-mobile/texto categorias
-//48px - logo
-//52px - texto inicial/texto confirmação de cadastro
+@mixin d($device) {
+  @if $device == tablet {
+    @media only screen and (min-width: 768px) and (max-width: 959px){
+      @content;
+    }
+  }
+  @else if $device == mobile {
+    @media only screen and (min-width: 767px){
+      @content
+    }
+  }
+}
 
 
  
