@@ -92,20 +92,23 @@ const questions = [
     },
 ]
 
-
-
-let container = document.getElementById('questions__container');
+//conta quantas vezes o usuário clicou nas perguntas
 let clickCount = 0;
+
+//recebe a soma das pontuações a cada acerto
 let score = 0;
 
-
+//cria um array com os itens trazidos na manipulação do DOM através da classe
 const createArrayDOM = (className) => {
     return document.querySelectorAll(className);
 }
 
+//cria dois arrays, utilizando a função anterior
+//os dados trazidos nesses arrays são os níveis de dificuldade e os temas
 const difficulties = createArrayDOM(".dificultty__item");
 const themes = createArrayDOM(".theme__item");
 
+//função que identifica qual item dos arrays anteriores foi selecionado
 const getItemArrDOM = (arr) => {
     let itemSelected = '';
 
@@ -119,6 +122,7 @@ const getItemArrDOM = (arr) => {
     return itemSelected;
 }
 
+//função que filtra as perguntas de acordo com o nivel de dificuldade e tema selecionados
 const filterQuestions = (arr) => {
 
     let newArr = [];
@@ -132,6 +136,7 @@ const filterQuestions = (arr) => {
    return newArr;
 }
 
+//função que recebe o resultado da função filterQuestions e monta as perguntas no HTML
 const createQuestion = (callback) => {
 
     let container = document.getElementById('questions__container');
@@ -151,6 +156,8 @@ const createQuestion = (callback) => {
     })
 }
 
+
+//funcão que desabilita a pergunta quando uma das respostas é clicada
 const disabledQuestion = (event) => {
     let clickedAnswer = event.target;
 
@@ -164,6 +171,9 @@ const disabledQuestion = (event) => {
 }
 
 const showScore = () => {
+
+    let container = document.getElementById('questions__container');
+
     if (clickCount >= 10) {
         if (score >= 0 && score < 70) {
            container.innerHTML = `
@@ -199,7 +209,6 @@ const reset = () => {
 const checkClicked = (target) => {
     if (target) {
         clickCount++;
-        console.log(clickCount);
     }
 }
 
