@@ -1,0 +1,45 @@
+//importando Google Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+//Cores Principais
+
+$color-primary: #FCCD07;
+$yellow-transparent: transparentize($color-primary, .31);
+$color-white: #fff;
+
+//Tipografia
+
+@mixin size($size) {
+  font-family: 'Roboto', sans-serif;
+  @if $size == 16 {
+    font-size: 16px;
+  }
+
+  @else if $size == 20 {
+    font-size: 20px;
+  }
+
+  @else if $size == 28 {
+    font-size: 28px;
+  }
+
+  @else if $size == 48 {
+    font-size: 48px;
+  }
+  
+  @else if $size == 52 {
+    font-size: 52px;
+  }
+}
+
+
+
+//16px - paragrafo confirmação de cadastro / link para login na página de confirmação de cadastro / texto links rodapé/texto do card/menu-desktop
+//20px - texto botão/texto nome categorias/texto perguntas/ texto label formulário
+//28px - texto menu-mobile/texto categorias
+//48px - logo
+//52px - texto inicial/texto confirmação de cadastro
+
+
+ 
