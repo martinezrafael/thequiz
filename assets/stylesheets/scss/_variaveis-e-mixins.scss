@@ -5,8 +5,9 @@
 //Cores Principais
 
 $color-primary: #FCCD07;
-$yellow-transparent: transparentize($color-primary, .31);
+$yellow-transparent: transparentize($color-primary,.31);
 $color-white: #fff;
+$color-black: #000;
 
 //Tipografia
 
@@ -30,21 +31,6 @@ $color-white: #fff;
   
   @else if $size == 52 {
     font-size: 52px;
-  }
-}
-
-//Responsividade
-
-@mixin d($device) {
-  @if $device == tablet {
-    @media only screen and (min-width: 768px) and (max-width: 959px){
-      @content;
-    }
-  }
-  @else if $device == mobile {
-    @media only screen and (min-width: 767px){
-      @content
-    }
   }
 }
 

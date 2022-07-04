@@ -2,10 +2,12 @@
 @import 'variaveis-e-mixins';
 
 // Gerais
+
 @import 'reset';
 @import 'main';
 
 // Páginas
+@import 'header';
 @import 'home';
 @import 'game';
 @import 'ranking';
