@@ -5,9 +5,10 @@
 //Cores Principais
 
 $color-primary: #FCCD07;
-$yellow-transparent: transparentize($color-primary,.31);
+$yellow-transparent: transparentize($color-primary, .31);
 $color-white: #fff;
 $color-black: #000;
+
 
 //Tipografia
 
@@ -34,5 +35,6 @@ $color-black: #000;
   }
 }
 
-
- 
+@mixin border-radius{
+  border-radius: 4px;
+}
