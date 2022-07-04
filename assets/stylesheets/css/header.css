@@ -1,0 +1,38 @@
+.header {
+  width: 100%;
+}
+
+.logo {
+  color:#FCCD07;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.header__container {
+  max-width: 80%;
+  margin: auto;
+  padding: 20px 0;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation__menu {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navigation__menu___item a {
+  color: #000;
+}
+
+.navigation__menu___item:last-child {
+  background-color: #FCCD07;
+  padding: 8px;
+  border-radius: 4px;
+}
