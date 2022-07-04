@@ -52,7 +52,11 @@ body {
 
 /* page game */
 #options {
-  padding: 20px 0;
+
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .container__options {
@@ -95,6 +99,13 @@ body {
 }
 
 .question__answer {
-  background-color: blue;
   padding: 10px;
+  border: 2px solid #FCCD07;
+  width: 50%;
+  cursor: pointer;
+}
+
+.question__answer:hover {
+  background: #FCCD07;
+  border: none;
 }
