@@ -36,3 +36,14 @@
   padding: 8px;
   border-radius: 4px;
 }
+
+
+@media screen and (max-width: 375px) {
+  .header__container {
+    flex-direction: column;
+  }
+
+  .navigation__menu___item {
+    display: none;
+  }
+}

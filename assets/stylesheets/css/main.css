@@ -109,3 +109,21 @@ body {
   background: #FCCD07;
   border: none;
 }
+
+@media screen and (max-width: 460px) {
+  .container__options select {
+    width: 100%;
+  }
+
+  #btn__play {
+    background-color: #FCCD07;
+    border: none;
+    font-size: 18px;
+    width: 100%;
+  }
+  
+  .question__answer {
+    width: 100%;
+    padding: 12px;
+  }
+}
