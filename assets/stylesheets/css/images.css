@@ -1,0 +1,12 @@
+.carousel__item___image--science {
+  background-image: url('/assets/images/science-image.jpg');
+}
+
+.carousel__item___image {
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px 4px 0 0;
+  height: 80%;
+  width: 100%;
+}
+

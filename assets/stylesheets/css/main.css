@@ -32,11 +32,21 @@ body {
   margin-bottom: 10px;
 }
 
-.introduction__content button:hover {
-  background: none;
-  border: 2px solid #FCCD07;
-  font-weight: bold;
+.introduction__content button {
+  background-color: #FCCD07;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  width: 248px;
 }
+
+.introduction__content button:hover {
+  background-color: #efcb3b;
+  font-weight: 600;
+}
+
 
 .cards h3 {
   font-size: 28px;
@@ -108,6 +118,40 @@ body {
 .question__answer:hover {
   background: #FCCD07;
   border: none;
+}
+
+/* cards */
+
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cards h3 {
+  margin-bottom: 10px;
+}
+
+.carousel__item {
+  background-color: #f3f3f3;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  height: 250px;
+  width: 200px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel__item___description {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 16px;
+}
+
+.icon {
+  width: 24px;
 }
 
 @media screen and (max-width: 460px) {
