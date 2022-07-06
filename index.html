@@ -5,112 +5,117 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>thequiz | Perguntas</title>
-    <link rel="stylesheet" href="./assets/stylesheets/css/reset.css">
-    <link rel="stylesheet" href="./assets/stylesheets/css/main.css">
-    <link rel="stylesheet" href="./assets/stylesheets/css/header.css">
-    <link rel="stylesheet" href="./assets/stylesheets/css/footer.css">
-    <link rel="stylesheet" href="./assets/stylesheets/css/images.css">
+    <title>thequiz | Página Inicial</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/stylesheets/css/reset.css" />
+
+    <link rel="stylesheet" href="./assets/stylesheets/css/main.css" />
+
+    <link rel="stylesheet" href="./assets/stylesheets/css/images.css" />
 </head>
 
 <body>
     <header class="header">
         <div class="header__container">
             <h2 class="logo">thequiz</h2>
-
             <nav class="navigation">
-                <ul class="navigation__menu">
-                    <li class="navigation__menu___item">
-                        <a href="index.html"> Página Inicial </a>
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="index.html" class="navigation__link">Página Inicial</a>
                     </li>
-                    <li class="navigation__menu___item">
-                        <a href="./pages/categories.html"> Categorias </a>
+                    <li class="navigation__item">
+                        <a href="./pages/categories.html" class="navigation__link">Temas</a>
                     </li>
-                    <li class="navigation__menu___item">
-                        <a href="./pages/ranking.html"> Ranking </a>
+                    <li class="navigation__item">
+                        <a href="./pages/ranking.html" class="navigation__link">Ranking</a>
                     </li>
-                    <li class="navigation__menu___item">
-                        <a href="./pages/login.html"> Acessar minha conta </a>
+                    <li class="navigation__item">
+                        <a href="./pages/login.html" class="navigation__link">Acessar minha conta</a>
                     </li>
-                    <li class="navigation__menu___item">
-                        <a href="./pages/register.html"> Criar uma conta </a>
+                    <li class="navigation__item">
+                        <a href="./pages/register.html" class="navigation__link">Criar uma conta</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
-
     <div class="container">
         <section class="introduction">
-            <div class="introduction__content">
-                <h2>
-                    Bem vindo ao melhor quiz de perguntas e repostas da internet!
+            <div class="introduction__container">
+                <h2 class="introduction__content">
+                    Bem vindo ao melhor quiz de perguntas e respostas da internet!
                 </h2>
-                <button>Veja como funciona</button>
+                <button class="introduction__btn">Veja como funciona</button>
             </div>
         </section>
-
-        <section class="cards categories__cards">
-            <h3>Categorias</h3>
-            <div class="carousel carousel__categories">
-                <div class="carousel__item">
-                    <div class="carousel__item___image carousel__item___image--science"></div>
-                    <div class="carousel__item___description">
-                        <span>Ciência</span>
-                        <span>
-                            <img class="icon" src="././assets/icons/science-icon.svg" alt="Icon Science">
-                        </span>
+        <section class="cards">
+            <div class="cards__themes">
+                <h3 class="cards__carousel___title">Temas</h3>
+                <div class="cards__carousel___list">
+                    <div class="cards__carousel___item">
+                        <div class="cards__carousel___image cards__carousel___image--music"></div>
+                        <div class="cards__carousel___description">
+                            <p class="cards__carousel___name">Musica</p>
+                            <span class="cards__carousel___icon">Icon</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="carousel__item">
-                    <div class="carousel__item___image carousel__item___image--science"></div>
-                    <div class="carousel__item___description">
-                        <span>Ciência</span>
-                        <span>
-                            <img class="icon" src="././assets/icons/science-icon.svg" alt="Icon Science">
-                        </span>
+                    <div class="cards__carousel___item">
+                        <div class="cards__carousel___image cards__carousel___image--movie"></div>
+                        <div class="cards__carousel___description">
+                            <p class="cards__carousel___name">Cinema</p>
+                            <span class="cards__carousel___icon">Icon</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="carousel__item">
-                    <div class="carousel__item___image carousel__item___image--science"></div>
-                    <div class="carousel__item___description">
-                        <span>Ciência</span>
-                        <span>
-                            <img class="icon" src="././assets/icons/science-icon.svg" alt="Icon Science">
-                        </span>
+                    <div class="cards__carousel___item">
+                        <div class="cards__carousel___image cards__carousel___image--knowledge"></div>
+                        <div class="cards__carousel___description">
+                            <p class="cards__carousel___name">conhecimentos Gerais</p>
+                            <span class="cards__carousel___icon">Icon</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section class="cards ranking__cards">
-            <h3>Ranking</h3>
+            <div class="cards__themes">
+                <h3 class="cards__carousel___title">Ranking</h3>
+                <div class="cards__carousel___list">
+                    <div class="cards__carousel___item">
+                        <div class="cards__carousel___image cards__carousel___image--matias"></div>
+                        <div class="cards__carousel___description">
+                            <p class="cards__carousel___name">Matias</p>
+                            <span class="cards__carousel___position">1º</span>
+                        </div>
+                    </div>
+
+                    <div class="cards__carousel___item">
+                        <div class="cards__carousel___image cards__carousel___image--joana"></div>
+                        <div class="cards__carousel___description">
+                            <p class="cards__carousel___name">Joana</p>
+                            <span class="cards__carousel___position">2º</span>
+                        </div>
+                    </div>
+
+                    <div class="cards__carousel___item">
+                        <div class="cards__carousel___image cards__carousel___image--pedro"></div>
+                        <div class="cards__carousel___description">
+                            <p class="cards__carousel___name">Pedro</p>
+                            <span class="cards__carousel___position">3º</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
-
-    <footer class="footer">
-        <div class="footer__links">
-            <div class="links__col-1">
-                <a href="#">Termos</a>
-                <a href="#">Trabalhe conosco</a>
-                <a href="#">Contato</a>
-            </div>
-            <div class="links__col-1">
-                <a href="./pages/about.html">Sobre o thequiz</a>
-                <a href="#">Mande sua ideia</a>
-                <a href="#">Ranking</a>
-                <a href="./pages/game.html">Jogar</a>
+    <!-- <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__links">
+                <a href="/pages/about.html" class="footer__link">Sobre o thequiz</a>
             </div>
         </div>
-
-        <div class="copyright">
-            <p>&copy; Todos os direitos reservados - 2022</p>
-        </div>
-    </footer>
-
-<script src=""></script>
+    </footer> -->
 </body>
 
 </html>

@@ -1,12 +1,30 @@
-.carousel__item___image--science {
-  background-image: url('/assets/images/science-image.jpg');
-}
-
-.carousel__item___image {
+/* TEMAS */
+.cards__carousel___image {
   background-size: cover;
   background-position: center;
-  border-radius: 4px 4px 0 0;
-  height: 80%;
-  width: 100%;
 }
 
+.cards__carousel___image--music {
+  background-image: url('/assets/images/musica.jpg');
+}
+
+.cards__carousel___image--movie {
+  background-image: url('/assets/images/cinema.jpg');
+}
+
+.cards__carousel___image--knowledge {
+  background-image: url('/assets/images/conhecimentos-gerais.jpg');
+}
+
+/* RANKING */
+.cards__carousel___image--matias {
+  background-image: url('/assets/images/matias.jpg');
+}
+
+.cards__carousel___image--joana {
+  background-image: url('/assets/images/joana.jpg');
+}
+
+.cards__carousel___image--pedro {
+  background-image: url('/assets/images/pedro.jpg');
+}
