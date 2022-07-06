@@ -53,7 +53,6 @@ body {
 .container {
   max-width: 90%;
   margin: 40px auto;
-  height: 500px;
 }
 
 /* INTRODUCTION */
@@ -82,16 +81,12 @@ body {
 /* CARDS RANKING */
 
 .cards {
-  height: 500px;
   margin: 40px auto;
 
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 40px;
-}
-
-.cards__themes{
-  padding: 10px;
+  flex-wrap: wrap;
 }
 
 .cards__carousel___title {
@@ -136,15 +131,25 @@ body {
 
 .footer {
   background-color: #414141;
-  height: 100px;
+  padding: 20px; 
+}
 
+.footer__container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.footer__links {
+  padding: 20px;
+}
 
 .footer__link {
   color: #fff;
   text-decoration: none;
+}
+
+.copyright {
+  color: #fff;
+  text-align: center;
 }

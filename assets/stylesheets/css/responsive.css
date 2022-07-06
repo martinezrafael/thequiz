@@ -1,0 +1,72 @@
+
+@media screen and (min-width: 768px) {
+  /* HEADER */
+  .header__container {
+    margin: auto;
+    width: 80%;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* LOGO */
+  .logo {
+    font-size: 48px;
+  }
+
+  /* NAVIGATION */
+  .navigation__list {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .navigation__item {
+    background: none;
+    border-radius: 0;
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .navigation__link {
+    text-decoration: underline;
+  }
+
+  .navigation__link:hover {
+    font-weight: 600;
+  }
+
+  /* CONTAINER */
+  .container {
+    max-width: 80%;
+  }
+
+  /* INTRODUCTION */
+  .introduction__container {
+    max-width: 400px;
+  }
+
+  .introduction__btn {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 18px;
+  }
+
+  /* CARDS */
+
+  /* CARDS THEMES */
+  /* CARDS RANKING */
+  
+  .cards {
+    flex-wrap: nowrap;
+  }
+
+  .cards__carousel___list {
+    flex-wrap: nowrap;
+  }
+
+
+
+}
+
+
