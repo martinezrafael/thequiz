@@ -5,59 +5,60 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>thequiz | Perguntas</title>
-  <link rel="stylesheet" href="../assets/stylesheets/css/style.css" />
+  <title>thequiz | Criar uma conta</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="/assets/stylesheets/css/reset.css" />
+  <link rel="stylesheet" href="/assets/stylesheets/css/main.css" />
+  <link rel="stylesheet" href="/assets/stylesheets/css/images.css" />
+  <link rel="stylesheet" href="/assets/stylesheets/css/responsive.css">
 </head>
 
 <body>
   <header class="header">
     <div class="header__container">
       <h2 class="logo">thequiz</h2>
-
-      <nav class="header__navigation">
-        <ul class="header__navigation___menu">
-          <li class="header__navigation___item">
-            <a href="../index.html" class="header__navigation___link">Página Inicial</a>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="index.html" class="navigation__link">Página Inicial</a>
           </li>
-          <li class="header__navigation___item">
-            <a href="././pages/categories.html" class="header__navigation___link">Categorias</a>
+          <li class="navigation__item">
+            <a href="./pages/categories.html" class="navigation__link">Temas</a>
           </li>
-          <li class="header__navigation___item">
-            <a href="././pages/ranking.html" class="header__navigation___link">Ranking</a>
+          <li class="navigation__item">
+            <a href="./pages/ranking.html" class="navigation__link">Ranking</a>
           </li>
-          <li class="header__navigation___item">
-            <a href="././pages/login.html" class="header__navigation___link">
-              Acessar minha conta
-            </a>
-          </li>
-          <li class="header__navigation___item">
-            <a href="././pages/register.html" class="header__navigation___link">Criar uma conta</a>
+          <li class="navigation__item">
+            <a href="./pages/login.html" class="navigation__link">Acessar minha conta</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
-  <div class="container"></div>
 
-  <footer class="footer">
-    <div class="footer__container">
-      <div class="links">
-        <a href="" class="footer__link">Termos</a>
-        <a href="" class="footer__link">Trabalhe conosco</a>
-        <a href="" class="footer__link">Contato</a>
+  <div class="container">
+    <section class="register">
+      <div class="register__container">
+        <h2 class="register__title">Cadastre-se</h2>
+        <form action="" class="register__form" method="POST">
+          <div class="register__form___row">
+            <label for="name" class="register__label">Nome</label>
+            <input id="name" name="name" type="text" />
+          </div>
+          <div class="register__form___row">
+            <label for="email" class="register__label">Email</label>
+            <input id="email" name="email" type="email" />
+          </div>
+          <div class="register__form___row">
+            <label for="password" class="register__label">Senha</label>
+            <input id="password" name="password" type="password" />
+          </div>
+          <button class="register__btn" type="button">Cadastrar</button>
+        </form>
       </div>
-
-      <div class="links">
-        <a href="" class="footer__link">Sobre o thequiz</a>
-        <a href="" class="footer__link">Mande sua ideia</a>
-        <a href="" class="footer__link">Ranking</a>
-      </div>
-    </div>
-
-    <div class="copyright">
-      <p>&copy; Todos os direitos reservados - 2022</p>
-    </div>
-  </footer>
+    </section>
+  </div>
 </body>
 
 </html>
