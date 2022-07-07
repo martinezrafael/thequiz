@@ -39,26 +39,39 @@
 
   <div class="container">
     <section class="register">
+      <div class="register__header">
+        <h2>Seja bem vindo!</h2>
+        <p>
+          Que bom que você decidiu se juntar a nós, agora é só fazer um cadastro bem rápido e você já pode jogar!
+        </p>
+      </div>
       <div class="register__container">
-        <h2 class="register__title">Cadastre-se</h2>
         <form action="" class="register__form" method="POST">
-          <div class="register__form___row">
             <label for="name" class="register__label">Nome</label>
-            <input id="name" name="name" type="text" />
-          </div>
-          <div class="register__form___row">
+            <input class="register__input" id="name" name="name" type="text" />
+
             <label for="email" class="register__label">Email</label>
-            <input id="email" name="email" type="email" />
-          </div>
-          <div class="register__form___row">
+            <input class="register__input" id="email" name="email" type="email" />
+       
             <label for="password" class="register__label">Senha</label>
-            <input id="password" name="password" type="password" />
-          </div>
-          <button class="register__btn" type="button">Cadastrar</button>
+            <input class="register__input" id="password" name="password" type="password" />
+            <button type="button" class="register__btn">Cadastrar</button>
         </form>
       </div>
     </section>
   </div>
+
+  <footer class="footer">
+    <div class="footer__container">
+        <div class="footer__links">
+            <a href="/pages/about.html" class="footer__link">Sobre o thequiz</a>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>&copy; Todos os direitos reservados - thequiz - 2022</p>
+    </div>
+</footer>
 </body>
 
 </html>

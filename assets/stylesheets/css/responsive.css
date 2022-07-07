@@ -1,4 +1,4 @@
-
+/* HOME */
 @media screen and (min-width: 768px) {
   /* HEADER */
   .header__container {
@@ -65,8 +65,22 @@
     flex-wrap: nowrap;
   }
 
-
-
 }
 
 
+/* PÁGINA DE CADASTRO */
+
+@media screen and (min-width: 768px) {
+
+.register__form {
+  max-width: 600px;
+}
+
+.register__input {
+  height: 42px;
+  margin-bottom: 18px;
+  padding: 5px;
+  width: 100%;
+}
+
+}

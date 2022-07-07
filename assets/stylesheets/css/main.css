@@ -162,16 +162,36 @@ body {
 
 /* PAGINA DE CADASTRO */
 
-.register__form___row{
-  width: 100%;
-  overflow: hidden;
+.register {
+  padding: 20px 0;
 }
 
-.register__form___row input,
-.register__form___row button {
+.register__header {
+  padding: 40px 0;
+  max-width: 500px;
+}
+
+.register__header h2 {
+  font-size: 48px;
+  font-weight: bold;
   margin-bottom: 10px;
-  padding: 10px;
-  width: 90%;
+}
+
+.register__header p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+
+.register__input {
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: none;
+  height: 38px;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
 }
 
 .register__btn {
@@ -179,6 +199,6 @@ body {
   border: none;
   border-radius: 4px;
   font-size: 18px;
+  height: 38px;
   width: 100%;
-  padding: 10px;
 }
