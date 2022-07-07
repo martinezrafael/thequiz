@@ -67,14 +67,21 @@
   }
 }
 
-/* PÁGINA DE CADASTRO */
+/* PÁGINA DE CADASTRO/LOGIN */
 
 @media screen and (min-width: 768px) {
-  .register__form {
+  .login {
+    height: 500px;
+  }
+
+  .register__form,
+  .login__form {
     max-width: 600px;
   }
 
-  .register__input {
+
+  .register__input,
+  .login__input {
     height: 42px;
     margin-bottom: 18px;
     padding: 5px;

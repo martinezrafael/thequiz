@@ -162,16 +162,19 @@ body {
 
 /* PAGINA DE CADASTRO */
 
-.register {
+.register,
+.login__form {
   padding: 20px 0;
 }
 
-.register__header {
+.register__header,
+.login__header {
   padding: 40px 0;
   max-width: 500px;
 }
 
-.register__header h2 {
+.register__header h2,
+.login__header h2 {
   font-size: 48px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -183,17 +186,20 @@ body {
   line-height: 1.2;
 }
 
-.register__input {
+.register__input,
+.login__input {
   box-sizing: border-box;
   border-radius: 4px;
   border: none;
+  font-size: 16px;
   height: 38px;
   margin-bottom: 10px;
   padding: 5px;
   width: 100%;
 }
 
-.register__btn {
+.register__btn,
+.login__btn {
   background-color: #fccd07;
   border: none;
   border-radius: 4px;
@@ -219,3 +225,6 @@ body {
   line-height: 1.2;
   margin-bottom: 10px;
 }
+
+/* PAGINA DE LOGIN */
+
