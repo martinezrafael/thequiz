@@ -71,7 +71,12 @@
 
 @media screen and (min-width: 768px) {
   .login {
-    height: 500px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
   }
 
   .register__form,
