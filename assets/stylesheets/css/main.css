@@ -60,10 +60,15 @@ body {
   width: 100%;
 }
 
-.introduction__content {
-  font-size: 56px;
+.introduction__content___title {
+  font-size: 48px;
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+.introduction__content___paragraph {
+  font-size: 18px;
+  line-height: 1.2;
 }
 
 .introduction__btn {
