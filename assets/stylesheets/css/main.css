@@ -1,10 +1,10 @@
 /* FONT */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 html,
 body {
   background-color: #f3f3f3;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 
@@ -25,7 +25,7 @@ body {
 
 /* LOGO */
 .logo {
-  color: #FCCD07;
+  color: #fccd07;
   font-size: 56px;
   font-weight: bold;
 }
@@ -38,7 +38,7 @@ body {
 }
 
 .navigation__item {
-  background-color: #FCCD07;
+  background-color: #fccd07;
   border-radius: 4px;
   font-size: 18px;
   padding: 20px;
@@ -72,7 +72,7 @@ body {
 }
 
 .introduction__btn {
-  background-color: #FCCD07;
+  background-color: #fccd07;
   border: none;
   border-radius: 4px;
   font-size: 18px;
@@ -137,7 +137,7 @@ body {
 
 .footer {
   background-color: #414141;
-  padding: 20px; 
+  padding: 20px;
 }
 
 .footer__container {
@@ -183,7 +183,6 @@ body {
   line-height: 1.2;
 }
 
-
 .register__input {
   box-sizing: border-box;
   border-radius: 4px;
@@ -195,10 +194,28 @@ body {
 }
 
 .register__btn {
-  background-color: #FCCD07;
+  background-color: #fccd07;
   border: none;
   border-radius: 4px;
   font-size: 18px;
   height: 38px;
   width: 100%;
+}
+
+/* PAGINA SOBRE */
+
+.about {
+  padding: 20px 0;
+}
+
+.about__title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about__paragraph {
+  font-size: 18px;
+  line-height: 1.2;
+  margin-bottom: 10px;
 }

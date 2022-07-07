@@ -1,5 +1,6 @@
 /* HOME */
 @media screen and (min-width: 768px) {
+
   /* HEADER */
   .header__container {
     margin: auto;
@@ -56,7 +57,7 @@
 
   /* CARDS THEMES */
   /* CARDS RANKING */
-  
+
   .cards {
     flex-wrap: nowrap;
   }
@@ -64,23 +65,32 @@
   .cards__carousel___list {
     flex-wrap: nowrap;
   }
-
 }
-
 
 /* PÁGINA DE CADASTRO */
 
 @media screen and (min-width: 768px) {
+  .register__form {
+    max-width: 600px;
+  }
 
-.register__form {
-  max-width: 600px;
+  .register__input {
+    height: 42px;
+    margin-bottom: 18px;
+    padding: 5px;
+    width: 100%;
+  }
 }
 
-.register__input {
-  height: 42px;
-  margin-bottom: 18px;
-  padding: 5px;
-  width: 100%;
-}
+/* PÁGINA SOBRE */
 
+@media screen and (min-width: 768px) {
+    .about {
+      max-width: 600px;
+      padding: 30px 0;
+    }
+
+    .about__paragraph {
+      line-height: 1.5;
+    }
 }
