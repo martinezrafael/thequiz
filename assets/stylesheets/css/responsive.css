@@ -107,3 +107,11 @@
       line-height: 1.5;
     }
 }
+
+/* PÁGINA DE TEMAS */
+
+@media screen and (min-width: 768px) {
+  .themes {
+    height: 100vh;
+  }
+}
