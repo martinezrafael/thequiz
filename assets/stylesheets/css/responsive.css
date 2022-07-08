@@ -115,3 +115,11 @@
     height: 100vh;
   }
 }
+
+/* PÁGINA DE RANKING */
+
+@media screen and (min-width: 768px) {
+  .ranking {
+    height: 100vh;
+  }
+}
