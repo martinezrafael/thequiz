@@ -1,94 +1,374 @@
 "use strict";
 
 const questions = [
+    // MUSICA FACIL
     {
-        title: 'Pergunta 1 - Música',
-        description: 'Descrição da Pergunta 1',
-        answers:['opcao 1','opcao 2','opcao 3'],
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 1 sobre música',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
         theme: 'music',
-        dificultty: 'default',
+        dificultty: 'easy',
         correctAnswer: 'alternative-0',
     },
     {
-        title: 'Pergunta 2 - Música',
-        description: 'Descrição da Pergunta 2',
-        answers:['opcao 4','opcao 5','opcao 6'],
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 2 sobre música',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
         theme: 'music',
-        dificultty: 'default',
-        correctAnswer: 'alternative-0'
-
+        dificultty: 'easy',
+        correctAnswer: 'alternative-0',
     },
     {
-        title: 'Pergunta 3 - Música',
-        description: 'Descrição da Pergunta 3',
-        answers:['opcao 7','opcao 8','opcao 9'],
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 3 sobre música',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
         theme: 'music',
-        dificultty: 'default',
-        correctAnswer: 'alternative-0'
-
+        dificultty: 'easy',
+        correctAnswer: 'alternative-0',
     },
     {
-        title: 'Pergunta 4',
-        description: 'Descrição da Pergunta 4',
-        answers:['opcao 10','opcao 11','opcao 12'],
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 4 sobre música',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
         theme: 'music',
-        dificultty: 'default',
-        correctAnswer: 'alternative-0'
-
+        dificultty: 'easy',
+        correctAnswer: 'alternative-0',
     },
     {
-        title: 'Pergunta 5',
-        description: 'Descrição da Pergunta 5',
-        answers:['opcao 10','opcao 11','opcao 12'],
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 5 sobre música',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
         theme: 'music',
-        dificultty: 'default',
-        correctAnswer: 'alternative-0'
-
+        dificultty: 'easy',
+        correctAnswer: 'alternative-0',
+    },
+    // MUSICA MEDIO
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 1 sobre música',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'music',
+        dificultty: 'medium',
+        correctAnswer: 'alternative-0',
     },
     {
-        title: 'Pergunta 6',
-        description: 'Descrição da Pergunta 6',
-        answers:['opcao 10','opcao 11','opcao 12'],
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 2 sobre música',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
         theme: 'music',
-        dificultty: 'default',
-        correctAnswer: 'alternative-0'
-
+        dificultty: 'medium',
+        correctAnswer: 'alternative-0',
     },
     {
-        title: 'Pergunta 7',
-        description: 'Descrição da Pergunta 7',
-        answers:['opcao 10','opcao 11','opcao 12'],
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 3 sobre música',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
         theme: 'music',
-        dificultty: 'default',
-        correctAnswer: 'alternative-0'
-
+        dificultty: 'medium',
+        correctAnswer: 'alternative-0',
     },
     {
-        title: 'Pergunta 8',
-        description: 'Descrição da Pergunta 8',
-        answers:['opcao 10','opcao 11','opcao 12'],
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 4 sobre música',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
         theme: 'music',
-        dificultty: 'default',
-        correctAnswer: 'alternative-0'
-
+        dificultty: 'medium',
+        correctAnswer: 'alternative-0',
     },
     {
-        title: 'Pergunta 9',
-        description: 'Descrição da Pergunta 9',
-        answers:['opcao 10','opcao 11','opcao 12'],
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 5 sobre música',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
         theme: 'music',
-        dificultty: 'default',
-        correctAnswer: 'alternative-0'
-
+        dificultty: 'medium',
+        correctAnswer: 'alternative-0',
+    },
+    // MUSICA DIFICIL
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 1 sobre música',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'music',
+        dificultty: 'hard',
+        correctAnswer: 'alternative-0',
     },
     {
-        title: 'Pergunta 10',
-        description: 'Descrição da Pergunta 10',
-        answers:['opcao 10','opcao 11','opcao 12'],
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 2 sobre música',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
         theme: 'music',
-        dificultty: 'default',
-        correctAnswer: 'alternative-0'
-
+        dificultty: 'hard',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 3 sobre música',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'music',
+        dificultty: 'hard',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 4 sobre música',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'music',
+        dificultty: 'hard',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 5 sobre música',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'music',
+        dificultty: 'hard',
+        correctAnswer: 'alternative-0',
+    },
+    // CINEMA FÁCIL
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 1 sobre filmes',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'movies',
+        dificultty: 'easy',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 2 sobre filmes',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'movies',
+        dificultty: 'easy',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 3 sobre filmes',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'movies',
+        dificultty: 'easy',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 4 sobre filmes',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'movies',
+        dificultty: 'easy',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 5 sobre filmes',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'movies',
+        dificultty: 'easy',
+        correctAnswer: 'alternative-0',
+    },
+    // FILMES MEDIO
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 1 sobre filmes',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'movies',
+        dificultty: 'medium',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 2 sobre filmes',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'movies',
+        dificultty: 'medium',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 3 sobre filmes',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'movies',
+        dificultty: 'medium',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 4 sobre filmes',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'movies',
+        dificultty: 'medium',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 5 sobre filmes',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'movies',
+        dificultty: 'medium',
+        correctAnswer: 'alternative-0',
+    },
+    // FILME DIFICIL
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 1 sobre filmes',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'movies',
+        dificultty: 'hard',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 2 sobre filmes',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'movies',
+        dificultty: 'hard',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 3 sobre filmes',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'movies',
+        dificultty: 'hard',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 4 sobre filmes',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'movies',
+        dificultty: 'hard',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 5 sobre filmes',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'movies',
+        dificultty: 'hard',
+        correctAnswer: 'alternative-0',
+    },
+    // CONHECIMENTOS GERAIS FACIL
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 1 sobre conhecimentos gerais',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'general_knowledge',
+        dificultty: 'easy',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 2 sobre conhecimentos gerais',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'general_knowledge',
+        dificultty: 'easy',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 3 sobre conhecimentos gerais',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'general_knowledge',
+        dificultty: 'easy',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 4 sobre conhecimentos gerais',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'general_knowledge',
+        dificultty: 'easy',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 5 sobre conhecimentos gerais',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'general_knowledge',
+        dificultty: 'easy',
+        correctAnswer: 'alternative-0',
+    },
+    // CONHECIMENTOS GERAIS MÉDIO
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 1 sobre conhecimentos gerais',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'general_knowledge',
+        dificultty: 'medium',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 2 sobre conhecimentos gerais',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'general_knowledge',
+        dificultty: 'medium',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 3 sobre conhecimentos gerais',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'general_knowledge',
+        dificultty: 'medium',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 4 sobre conhecimentos gerais',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'general_knowledge',
+        dificultty: 'medium',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 5 sobre conhecimentos gerais',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'general_knowledge',
+        dificultty: 'medium',
+        correctAnswer: 'alternative-0',
+    },
+    // CONHECIMENTOS GERAIS DIFICIL
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 1 sobre conhecimentos gerais',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'general_knowledge',
+        dificultty: 'hard',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 2 sobre conhecimentos gerais',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'general_knowledge',
+        dificultty: 'hard',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 3 sobre conhecimentos gerais',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'general_knowledge',
+        dificultty: 'hard',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 4 sobre conhecimentos gerais',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'general_knowledge',
+        dificultty: 'hard',
+        correctAnswer: 'alternative-0',
+    },
+    {
+        title: 'Pergunta',
+        description: 'Descrição da Pergunta 5 sobre conhecimentos gerais',
+        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        theme: 'general_knowledge',
+        dificultty: 'hard',
+        correctAnswer: 'alternative-0',
     },
 ]
 
@@ -144,7 +424,7 @@ const createQuestion = (callback) => {
     container.innerHTML = callback.map((question, questionIndex) => {
        return `
         <div class='question'>
-            <h2 class='question__title'>${question.title}</h2>
+            <h2 class='question__title'>${question.title} ${questionIndex + 1} - ${question.theme}</h2>
             <p class='question__description'>${question.description}</p>
             <ul>
                 ${question.answers.map((answer, index) => {
@@ -179,25 +459,23 @@ const showScore = () => {
 
     let container = document.getElementById('questions__container');
 
-    if (clickCount >= 10) {
-        if (score >= 0 && score < 70) {
+    if (clickCount >= 5) {
+        if (score >= 0 && score < 60) {
            container.innerHTML = `
             <div class='gameOver'>
                 <h2>Não foi dessa vez :(</h2>
-                <p>Você precisava fazer no mínimo 70 pontos e sua pontuação foi de ${score}.</p>
+                <p>Você precisava fazer no mínimo 60 pontos e sua pontuação foi de ${score}.</p>
                 <button onClick='reset()' class='btn__reset'>Jogar novamente</button>
             </div>
            `
-        } else if (score >= 70) {
+        } else if (score >= 60) {
             container.innerHTML = `
             <div class='gameOver'>
                 <h2>Uhuul, você é um sucesso!</h2>
-                <p>Você precisava fazer no mínimo 70 pontos e sua pontuação foi de ${score}.</p>
+                <p>Você precisava fazer no mínimo 60 pontos e sua pontuação foi de ${score}.</p>
                 <button onClick='reset()' class='btn__reset'>Jogar novamente</button>
             </div>
-            `
-            
-            
+            `  
         }
         hiddenFields();
         play.style.display = 'none';
@@ -230,7 +508,7 @@ const checkAnswer = (event) => {
         question.index = index;
         
         if (question.index === targetQuestionClass && question.correctAnswer === targetAnswerClass) {
-          score += 10;
+          score += 20;
         }
     })
 
