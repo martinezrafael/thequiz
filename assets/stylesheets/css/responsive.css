@@ -133,3 +133,38 @@
     padding: 20px 0;
   }
 }
+
+/* PÁGINA DE GAME */
+
+@media screen and (min-width: 768px) {
+  #options {
+    max-width: 400px;
+  }
+
+  #questions__container {
+    max-width: 700px;
+  }
+
+  .question {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+  }
+
+  .question__answer {
+    background-color: #fff;
+  }
+
+  .question__answer:hover {
+    background-color: #fccd07;
+    cursor: pointer;
+  }
+
+  .gameOver {
+    height: 100vh;
+  }
+
+  .btn__reset {
+    max-width: 50%;
+  }
+
+}
