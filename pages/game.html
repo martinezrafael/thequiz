@@ -6,24 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>thequiz | Perguntas</title>
-    <link rel="stylesheet" href="..//assets/stylesheets/css/reset.css">
-    <link rel="stylesheet" href="..//assets/stylesheets/css/main.css">
-    <link rel="stylesheet" href="..//assets/stylesheets/css/header.css">
-    <link rel="stylesheet" href="..//assets/stylesheets/css/footer.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/assets/stylesheets/css/reset.css">
+
+    <link rel="stylesheet" href="/assets/stylesheets/css/main.css">
+
+    <link rel="stylesheet" href="/assets/stylesheets/css/images.css">
+
+    <link rel="stylesheet" href="/assets/stylesheets/css/responsive.css">
+
 </head>
 
 <body>
     <header class="header">
         <div class="header__container">
             <h2 class="logo">thequiz</h2>
-
             <nav class="navigation">
-                <ul class="navigation__menu">
-                    <li class="navigation__menu___item">
-                        <a href="index.html"> Meu perfil </a>
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="/pages/account.html" class="navigation__link">Minha Conta</a>
                     </li>
-                    <li class="navigation__menu___item">
-                        <a href="./pages/categories.html"> Logout </a>
+                    <li class="navigation__item">
+                        <a href="/pages/login.html" class="navigation__link">Logout</a>
                     </li>
                 </ul>
             </nav>
@@ -61,29 +66,10 @@
                     </option>
                 </select>
             </div>
-            <button id="btn__play">Jogar</button>
+            <button id="btn__play" class="btn__play">Jogar</button>
         </form>
         <div id="questions__container"></div>
     </div>
-
-    <footer class="footer">
-        <div class="footer__links">
-            <div class="links__col-1">
-                <a href="#">Termos</a>
-                <a href="#">Trabalhe conosco</a>
-                <a href="#">Contato</a>
-            </div>
-            <div class="links__col-1">
-                <a href="./pages/about.html">Sobre o thequiz</a>
-                <a href="#">Mande sua ideia</a>
-                <a href="#">Ranking</a>
-            </div>
-        </div>
-
-        <div class="copyright">
-            <p>&copy; Todos os direitos reservados - 2022</p>
-        </div>
-    </footer>
 
     <script src="../assets/scripts/game.js"></script>
 </body>

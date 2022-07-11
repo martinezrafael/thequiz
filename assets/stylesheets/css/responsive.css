@@ -126,8 +126,10 @@
 
 /* PÁGINA DE MINHA CONTA */
 
-.myAccount {
-  max-width: 400px;
-  height: 100vh;
-  padding: 20px 0;
+@media screen and (min-width: 768px) {
+  .myAccount {
+    max-width: 400px;
+    height: 100vh;
+    padding: 20px 0;
+  }
 }

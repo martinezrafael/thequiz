@@ -204,13 +204,18 @@ body {
 
 .register__btn,
 .login__btn,
-.btn__play {
+.btn__play,
+.btn__reset {
   background-color: #fccd07;
   border: none;
   border-radius: 4px;
   font-size: 18px;
   height: 58px;
   width: 100%;
+}
+
+.btn__reset {
+  margin-bottom: 20px;
 }
 
 /* PAGINA SOBRE */
@@ -271,7 +276,70 @@ body {
   margin-bottom: 20px;
 }
 
+
 .btn__play a {
   color: #000;
   text-decoration: none;
+}
+
+
+/* PAGINA DE GAME */
+.container__options h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.container__options select {
+  box-sizing: border-box;
+  font-size: 16px;
+  height: 38px;
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 100%;
+}
+
+.question__title {
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.question__description {
+  font-size: 20px;
+  line-height: 1.2;
+  padding: 10px 0;
+}
+
+.question__answer {
+  background-color: #fccd07;
+  border: none;
+  border-radius: 4px;
+  font-size: 22px;
+  height: 58px;
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameOver {
+  height: 50vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gameOver h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.gameOver p {
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+
 }

@@ -144,8 +144,8 @@ const createQuestion = (callback) => {
     container.innerHTML = callback.map((question, questionIndex) => {
        return `
         <div class='question'>
-            <h2 class='questions__title'>${question.title}</h2>
-            <p class='questions__description'>${question.description}</p>
+            <h2 class='question__title'>${question.title}</h2>
+            <p class='question__description'>${question.description}</p>
             <ul>
                 ${question.answers.map((answer, index) => {
                     return `<li class='question__answer question-${questionIndex} alternative-${index}' onClick='checkAnswer(event)'>${answer}</li>`
@@ -170,6 +170,11 @@ const disabledQuestion = (event) => {
     
 }
 
+const hiddenFields = () => {
+    let difficultyField = document.getElementById('options');
+    difficultyField.style.display = 'none';
+}
+
 const showScore = () => {
 
     let container = document.getElementById('questions__container');
@@ -177,26 +182,24 @@ const showScore = () => {
     if (clickCount >= 10) {
         if (score >= 0 && score < 70) {
            container.innerHTML = `
-            <div>
-                <button onClick='reset()'>Jogar novamente</button>
-                <h2>Não foi desta vez, você fez apenas ${score} pontos!</h2>
-
-                <div>
-                    <div style="width:100%;height:0;padding-bottom:83%;position:relative;"><iframe src="https://giphy.com/embed/lWPpTGShahMiGD58Sx" width="80%" height="500" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/theoffice-lWPpTGShahMiGD58Sx">via GIPHY</a></p>
-                    </div>
-                </div> 
+            <div class='gameOver'>
+                <h2>Não foi dessa vez :(</h2>
+                <p>Você precisava fazer no mínimo 70 pontos e sua pontuação foi de ${score}.</p>
+                <button onClick='reset()' class='btn__reset'>Jogar novamente</button>
+            </div>
            `
         } else if (score >= 70) {
             container.innerHTML = `
-            <button onClick='reset()'>Jogar novamente</button>
-            <div>
-                <h2>Uhull que sucesso, você fez ${score} pontos!</h2>
-
-                <div>
-                    <div style="width:100%;height:0;padding-bottom:83%;position:relative;"><iframe src="https://giphy.com/embed/o75ajIFH0QnQC3nCeD" width="80%" height="500" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/theoffice-o75ajIFH0QnQC3nCeD">via GIPHY</a></p>
-                </div>
-           `
+            <div class='gameOver'>
+                <h2>Uhuul, você é um sucesso!</h2>
+                <p>Você precisava fazer no mínimo 70 pontos e sua pontuação foi de ${score}.</p>
+                <button onClick='reset()' class='btn__reset'>Jogar novamente</button>
+            </div>
+            `
+            
+            
         }
+        hiddenFields();
         play.style.display = 'none';
     }
 };
