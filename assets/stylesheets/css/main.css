@@ -148,10 +148,14 @@ body {
 
 .footer__links {
   padding: 20px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__link {
   color: #fff;
+  margin-bottom: 20px;
   text-decoration: none;
 }
 
