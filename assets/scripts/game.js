@@ -31,11 +31,11 @@ const questions = [
         correctAnswer: 'alternative-0',
     },
     {
-        description: 'Descrição da Pergunta 5 sobre música',
-        answers:['Primeira opção','Segunda opção','Terceira opção'],
-        theme: 'music',
+        description: 'Em que ano foi formada a banda Forfun?',
+        answers:['1998','2008','2001'],
+        theme: 'music', 
         dificultty: 'easy',
-        correctAnswer: 'alternative-0',
+        correctAnswer: 'alternative-2',
     },
     // MUSICA MEDIO
     {
@@ -67,8 +67,8 @@ const questions = [
         correctAnswer: 'alternative-0',
     },
     {
-        description: 'Descrição da Pergunta 5 sobre música',
-        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        description: 'Em que ano surgiu a banda Planet Hemp?',
+        answers:['1993','1991','2000'],
         theme: 'music',
         dificultty: 'medium',
         correctAnswer: 'alternative-0',
@@ -103,8 +103,8 @@ const questions = [
         correctAnswer: 'alternative-0',
     },
     {
-        description: 'Descrição da Pergunta 5 sobre música',
-        answers:['Primeira opção','Segunda opção','Terceira opção'],
+        description: 'Quantos anos tinha Freddie Mercury quando criou a sua primeira banda? ',
+        answers:['14','12','18'],
         theme: 'music',
         dificultty: 'hard',
         correctAnswer: 'alternative-0',
