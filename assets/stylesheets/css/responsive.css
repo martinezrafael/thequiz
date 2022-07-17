@@ -12,9 +12,6 @@
   }
 
   /* LOGO */
-  .logo {
-    font-size: 48px;
-  }
 
   /* NAVIGATION */
   .navigation__list {
@@ -25,7 +22,6 @@
   .navigation__item {
     background: none;
     border-radius: 0;
-    font-size: 16px;
     padding: 0;
   }
 
@@ -43,9 +39,7 @@
   }
 
   /* INTRODUCTION */
-  .introduction__container {
-    max-width: 400px;
-  }
+
 
   .introduction__btn {
     cursor: pointer;
