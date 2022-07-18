@@ -53,8 +53,7 @@
     width: 100%;
   }
 
-  .footer {
-    height: 120px;
+  .footer__container {
+    padding: 20px 0;
   }
-  
 }
