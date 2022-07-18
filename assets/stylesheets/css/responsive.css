@@ -32,6 +32,7 @@
 
   .introduction {
     height: auto;
+    text-align: center;
   }
 
   .introduction__container {
@@ -41,6 +42,7 @@
 
   .introduction__content___title {
     font-size: 52px;
+    margin-bottom: 20px;
   }
 
   .cards__carousel___list {
@@ -49,6 +51,10 @@
 
   .cards__carousel___item {
     width: 100%;
+  }
+
+  .footer {
+    height: 120px;
   }
   
 }
