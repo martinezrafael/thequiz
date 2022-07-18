@@ -6,6 +6,8 @@
   --color-black: #414141;
   --color-white: #fffff4;
   --color-blue: #1919ff;
+  --color-green: #00b700;
+  --color-green--hover: #176f17;
 }
 
 html,
@@ -88,6 +90,24 @@ body {
 .introduction__content___paragraph {
   font-size: 20px;
   line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.introduction__btn___play {
+  background-color: var(--color-green);
+  border-radius: 10px;
+  color: var(--color-white);
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  text-decoration:none;
+  text-transform: uppercase;
+  width: 240px;
+}
+
+.introduction__btn___play:hover {
+  background-color: var(--color-green--hover);
 }
 
 .cards {
